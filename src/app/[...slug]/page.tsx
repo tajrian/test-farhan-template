@@ -7,6 +7,12 @@ import { notFound } from 'next/navigation';
  */
 export const dynamicParams = true;
 
+/**
+ * Incremental Static Regeneration - regenerate page at most once every 60 seconds
+ * This ensures CMS content updates appear on the site within 60 seconds
+ */
+export const revalidate = 60;
+
 type Props = {
   params: Promise<{
     slug: string[];
